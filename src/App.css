@@ -1,0 +1,32 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.home {
+    background-image: url('./assets/home.jpg');
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home .header-container {
+    position: absolute;
+    width: 100%;
+    top: 40vh;
+    background-color: white;
+    opacity: 80%;
+}
+
+.home .header {
+    text-align: center;
+    padding: 5px 10px;
+}
+
+.home .start-button {
+    position: absolute;
+    top: 55vh;
+    text-align: center;
+    left: 0;
+    right: 0;
+}
