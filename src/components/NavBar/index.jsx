@@ -9,7 +9,13 @@ const NavBar = () => {
             <Container>
                 <Navbar.Brand><Link to="/">Real Estate</Link></Navbar.Brand>
                 <Nav className="me-auto">
-                    <Link to="/">Home</Link>
+                    <Nav.Item style={{ marginRight: '8px' }}>
+                        <Link to="/">Home</Link>
+                    </Nav.Item>
+
+                    <Nav.Item>
+                        <Link to="/search">Search</Link>
+                    </Nav.Item>
                 </Nav>
             </Container>
         </Navbar>
