@@ -3,6 +3,11 @@
     padding: 0px;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 .home {
     background-image: url('./assets/home.jpg');
     height: 90vh;
@@ -29,4 +34,15 @@
     text-align: center;
     left: 0;
     right: 0;
+}
+
+.searchButton {
+    height: 31px;
+    padding: 2px 16px;
+    border: none;
+    margin-left: 15px;
+    background-color: rgba(3, 159, 207, 0.521);
+    color: white;
+    font-weight: bold;
+    border-radius: 5%;
 }
