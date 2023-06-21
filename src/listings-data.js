@@ -14,7 +14,7 @@ const listings = [
         ],
     },
     {
-        id:1,
+        id:2,
         city: 'Toronto',
         transactionType:'rental',
         propertyType: 'condo',
@@ -28,7 +28,7 @@ const listings = [
         ],
     },
     {
-        id:1,
+        id:3,
         city: 'Toronto',
         transactionType:'rental',
         propertyType: 'condo',
@@ -38,11 +38,11 @@ const listings = [
         address: '9201 yonge st',
         postalCode:'ABC 123',
         pictures: [
-            
+            'home.jpg'
         ],
     },
     {
-        id:1,
+        id:4,
         city: 'Toronto',
         transactionType:'rental',
         propertyType: 'condo',

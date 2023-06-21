@@ -46,3 +46,27 @@ a {
     font-weight: bold;
     border-radius: 5%;
 }
+
+.oneListing {
+    margin-top: 10px;
+    max-height: 90vh;
+}
+
+.oneListing .carousel {
+    width: 90%;
+}
+
+.oneListing .listing-image {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+}
+
+.oneListing .recommend-col .recommend-heading {
+    background-color: rgba(74, 74, 245, 0.096);
+    text-align: center;
+    padding: 8px 0px;
+    border-radius: 5px;
+    font-weight: 600;
+}

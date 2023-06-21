@@ -43,9 +43,13 @@ const SearchPage = () => {
             <Container fluid >
                 <Row style={{ width: 'fit-content', marginRight: 'auto', marginLeft: 'auto', display: 'flex' }}>
                     {data && data.map((listing, index) => {
-                        return <Col md={3} sm={6} key={index} style={{ marginBottom: '10px' }}>
-                            <Listing {...listing} />
-                        </Col>
+                        return (
+
+                            <Col md={3} sm={6} key={index} style={{ marginBottom: '10px' }}>
+                                <Link to={listing.id.toString()}><Listing {...listing} /></Link>
+                            </Col>
+
+                        )
                     })}
                 </Row>
             </Container>
