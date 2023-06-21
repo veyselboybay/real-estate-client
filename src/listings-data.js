@@ -7,10 +7,10 @@ const listings = [
         beds: '1',
         description: 'Excellent location, 2-min walk to subway, close to restaurants and shopping malls',
         price: 2000,
-        address: '9201 yonge st',
+        address: '1 yonge st',
         postalCode:'ABC 123',
         pictures: [
-            
+            'home.jpg'
         ],
     },
     {

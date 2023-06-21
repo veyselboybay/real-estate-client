@@ -70,3 +70,20 @@ a {
     border-radius: 5px;
     font-weight: 600;
 }
+
+.oneListing .description {
+    margin-top: 20px;
+    padding: 0px 2.2rem;
+    margin-bottom: 40px;
+}
+
+.oneListing .description h5 {
+    background-color: rgba(74, 74, 245, 0.060);
+    border-radius: 5px;
+    padding: 3px 10px;
+}
+
+.oneListing .description p {
+    text-transform: capitalize;
+    padding-left: 1.5rem;
+}

@@ -6,8 +6,8 @@ const Listing = ({ id, city, transactionType, propertyType, beds, description, p
     // console.log(listingPic);
     return (
         <Card style={{ width: '19rem' }}>
-            <Card.Img variant="top" src={listingPic ? './src/assets/' + listingPic : condoImg} />
-            <Card.Body>
+            <Card.Img variant="top" style={{ height: '10rem' }} src={listingPic ? './src/assets/' + listingPic : condoImg} />
+            <Card.Body style={{ height: '10rem' }}>
                 {description && <Card.Text>
                     {description}
                 </Card.Text>}

@@ -28,7 +28,20 @@ const OneListPage = () => {
                             />
                         </Carousel.Item>
                     </Carousel>
-                    {listing && <p>{listing.description}</p>}
+                    <Container className='description'>
+                        {listing && <>
+                            <h5>Price</h5>
+                            <p>${listing.price}/month</p>
+                            <h5>Description of the place</h5>
+                            <p>{listing.description}</p>
+                            <h5>Type of the Place</h5>
+                            <p>{listing.transactionType} {listing.propertyType}</p>
+                            <h5>Beds</h5>
+                            <p>{listing.beds} bed(s)</p>
+                            <h5>Location</h5>
+                            <p>{listing.address} - {listing.city} - {listing.postalCode}</p>
+                        </>}
+                    </Container>
                 </Col>
                 <Col md={3} className='recommend-col'>
                     <p className='recommend-heading'>MAYBE ONE OF THESE?</p>
