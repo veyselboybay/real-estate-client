@@ -7,9 +7,9 @@ import { Link, useParams } from 'react-router-dom'
 
 
 const OneListPage = () => {
-    const data = listingData.slice(0, 3);
     const { listingId } = useParams();
-    let listing = listingData.find(item => item.id === parseInt(listingId));;
+    const data = listingData.filter(item => item.id !== parseInt(listingId)).slice(0, 3);
+    let listing = listingData.find(item => item.id === parseInt(listingId));
     useEffect(() => {
         listing = listingData.find(item => item.id === parseInt(listingId));
         // console.log(listing);
@@ -39,7 +39,9 @@ const OneListPage = () => {
                             <h5>Beds</h5>
                             <p>{listing.beds} bed(s)</p>
                             <h5>Location</h5>
-                            <p>{listing.address} - {listing.city} - {listing.postalCode}</p>
+                            <p>{listing.city} - {listing.postalCode}</p>
+                            <h5>Owner Information</h5>
+                            <p>n/a</p>
                         </>}
                     </Container>
                 </Col>
