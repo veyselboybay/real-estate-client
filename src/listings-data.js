@@ -1,7 +1,7 @@
 const listings = [
     {
         id:1,
-        city: 'Toronto',
+        city: 'toronto',
         transactionType:'rental',
         propertyType: 'condo',
         beds: '1',
@@ -15,7 +15,7 @@ const listings = [
     },
     {
         id:2,
-        city: 'Toronto',
+        city: 'toronto',
         transactionType:'rental',
         propertyType: 'condo',
         beds: '1',
@@ -29,8 +29,8 @@ const listings = [
     },
     {
         id:3,
-        city: 'Toronto',
-        transactionType:'rental',
+        city: 'toronto',
+        transactionType:'sale',
         propertyType: 'condo',
         beds: '1',
         description: 'Excellent location, 2-min walk to subway, close to restaurants and shopping malls',
@@ -43,7 +43,7 @@ const listings = [
     },
     {
         id:4,
-        city: 'Toronto',
+        city: 'richmond hill',
         transactionType:'rental',
         propertyType: 'condo',
         beds: '1',
@@ -57,4 +57,4 @@ const listings = [
     },
 ]
 
-export default listings
+export default  listings
