@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Button, Container, Form, Col, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import data from '../../listings-data'
 import Listing from '../Listing'
 import { useDispatch, useSelector } from 'react-redux'
 import { getListings, searchListings } from '../../features/listingSlice'
@@ -9,18 +8,22 @@ import { getListings, searchListings } from '../../features/listingSlice'
 const SearchPage = () => {
     const dispatch = useDispatch();
     const { listings } = useSelector(store => store.listing);
-    const [queryObj, setQueryObj] = useState({
+    const initialQueryState = {
         city: 'toronto',
         transactionType: 'rental',
         propertyType: 'condo',
         beds: '1'
-    })
+    }
+    const [queryObj, setQueryObj] = useState(initialQueryState)
+    // get geo location
     useEffect(() => {
         navigator.geolocation.getCurrentPosition((positions) => {
             const coord = positions.coords;
         });
     }, []);
+    // get initial data for render
     useEffect(() => {
+        setQueryObj(initialQueryState);
         dispatch(getListings(queryObj));
     }, []);
 
@@ -60,6 +63,10 @@ const SearchPage = () => {
                 <button className='searchButton' onClick={() => dispatch(searchListings(queryObj))}>Search</button>
             </Container>
             <Container fluid >
+                {listings.length === 0 && <div style={{ color: 'white', fontWeight: 'bold', backgroundColor: 'grey', padding: '20px 30px', marginTop: '50px' }}>
+                    <p style={{ textAlign: 'center', textTransform: 'uppercase' }}>Oops!</p>
+                    <p style={{ textAlign: 'center', textTransform: 'uppercase' }}>We couldn't find any!</p>
+                </div>}
                 <Row style={{ width: 'fit-content', marginRight: 'auto', marginLeft: 'auto', display: 'flex' }}>
                     {listings && listings.map((listing, index) => {
                         return (

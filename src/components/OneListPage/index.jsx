@@ -1,17 +1,18 @@
 import React, { useEffect } from 'react'
 import { Col, Container, Row, Carousel } from 'react-bootstrap'
 import condoPic from '../../assets/condoPic.jpg'
-import listingData from '../../listings-data'
 import Recommend from '../Recommend'
 import { Link, useParams } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 
 const OneListPage = () => {
+    const { listings } = useSelector(store => store.listing);
     const { listingId } = useParams();
-    const data = listingData.filter(item => item.id !== parseInt(listingId)).slice(0, 3);
-    let listing = listingData.find(item => item.id === parseInt(listingId));
+    const data = listings.filter(item => item.id !== parseInt(listingId)).slice(0, 3);
+    let listing = listings.find(item => item.id === parseInt(listingId));
     useEffect(() => {
-        listing = listingData.find(item => item.id === parseInt(listingId));
+        listing = listings.find(item => item.id === parseInt(listingId));
         // console.log(listing);
     }, [listingId])
     return (
